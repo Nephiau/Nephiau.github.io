@@ -342,7 +342,7 @@ MOBILE MOBILE MOBILE */
     width: 70%;
     background-color: var(--text-color);
     color: var(--background-color);
-    font-size: 2rem;
+    font-size: 1.75rem;
   }
 
   .ornaments-top {
@@ -720,7 +720,7 @@ MOBILE MOBILE MOBILE */
     color: var(--text-color);
     font-family: var(--baskervville);
     font-weight: 500;
-    font-size: 4.5rem;
+    font-size: 4rem;
   }
   .service-screen .text .title p {
     width: 90vw;
@@ -891,7 +891,7 @@ MOBILE MOBILE MOBILE */
   .contact-layout .box-wrapper p {
     color:  var(--text-color);
     text-align: center;
-    font-size: 1.30rem;
+    font-size: 1.15rem;
     padding-bottom: 1vh;
   }
   .contact-layout .footer {
