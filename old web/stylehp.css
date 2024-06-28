@@ -1,0 +1,720 @@
+#body .body body {
+    font-family: "montserrat", sans-serif;
+    width: 100vw;
+    overflow-x: hidden;
+    scrollbar-color: lightskyblue transparent;
+    box-sizing: border-box;
+}
+
+
+::-webkit-scrollbar {
+    width: 0.5vw; 
+}
+::-webkit-scrollbar-track {
+    background-color: rgb(34, 34, 34); /* Change this to the color you want for the track */
+}
+::-webkit-scrollbar-thumb {
+    background: lightblue; /* color of the scrollbar handle */
+    border-radius: 100px; /* roundness of the scrollbar handle */
+}
+::-webkit-scrollbar-thumb:hover {
+    background: snow; /* color of the scrollbar handle on hover */
+}
+
+
+
+.nav {
+    display: flex;
+    position: fixed;
+    width: 100vw;
+    height: 7vh;
+    z-index: 999;
+
+    background-color: rgb(0, 0, 0, 0.8);
+
+    box-sizing: border-box;
+}
+
+.nav .right {
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    right: 0;
+
+    width: 100vw;
+    height: inherit;
+
+    box-sizing: border-box;
+}
+.nav .right a:link, .nav .right a:visited{
+    position: relative;
+    font-size: 1.5vmax;
+    text-decoration: none;
+    color: #dcdcdc;
+}
+.nav .right a:hover {
+    animation-name: linknav;
+    animation-iteration-count: 1;
+    animation-duration: 10s;
+    animation-timing-function: ease;
+}
+@keyframes linknav {
+    0% {color: #dcdcdc;}
+    7% {color: rgb(177, 224, 254);}
+    100% {color: rgb(177, 224, 254);}
+
+}
+
+
+/* PROFILE */
+/* PROFILE */
+/* PROFILE */
+.profile {
+    position: absolute;
+
+    background-image: url(pic/bgproffile.jpg);
+    background-position: center;
+    background-size: cover;
+
+    width: 100%;
+    height: 100vh;
+
+    z-index: 1;
+}
+.profile .piccover {
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    background-color: rgb(0, 0, 0, 0.8);
+
+    z-index: 2;
+}
+.profile .pic {
+    box-sizing: border-box;
+    position: absolute;
+    width: 80%;
+    top: 1vh;
+    left: 10%;
+    height: 15vh;
+
+    background-image: url(pic/eula.jpg);
+    background-size: cover; 
+    background-repeat: no-repeat;
+    border-radius: 87px;
+
+    animation-name: pfp;
+    animation-duration: 20s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+
+    z-index: 4;
+}
+@keyframes pfp {
+    0% {background-position-y: top;}
+    50% {background-position-y: bottom;}
+    100% {background-position-y: top;}
+}
+.profile .name {
+    display: flex;
+    justify-content: space-evenly;
+
+    position: absolute;
+    top : 21.5vh;
+    width: 100%;
+
+    font-size: 6vh;
+    color: snow;
+
+    animation-name: name;
+    animation-iteration-count: infinite;
+    animation-duration: 8s;
+
+    z-index: 4;
+}
+@keyframes name {
+    0% {color: snow;}
+    25% {color: rgb(177, 224, 254);
+        text-shadow: 0 0 10px rgb(163, 220, 255),
+                     0 0 15px rgb(163, 220, 255);}
+    75% {color: lightskyblue;
+        text-shadow: 0 0 15px rgb(163, 220, 255),
+                     0 0 10px rgb(163, 220, 255);}
+    100% {color: snow;}
+}
+.profile .biodata {
+    position: absolute;
+    width: 70%;
+    height: 42vh;
+    left: 15%;
+    top: 35vh;
+
+    font-size: 18px;
+    color: antiquewhite;
+    text-align: justify;
+    letter-spacing: 1px;
+
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: lightblue transparent ;
+    scroll-behavior: smooth;
+
+    z-index: 4;
+}
+
+.profile .anim {
+    position: relative;
+    animation-name: anim;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+}
+@keyframes anim {
+    0% {top: 900px;}
+    100% {top: 90px;}
+}
+
+/*EXPERIENCE*/
+/*EXPERIENCE*/
+/*EXPERIENCE*/
+.exp {
+    position: absolute;
+    top: 100vh;
+    width: 100%;
+    height: 225vh;
+    color: #dcdcdc;
+}
+.exp .bg {
+    position: absolute;
+    background-image: url(pic/wallpaperflare.com_wallpaper\ \(8\).jpg);
+    background-color: #0c0c0c;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+.exp .bgcover {
+    position: absolute;
+    z-index: 2;
+    background-color: rgb(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+}
+.exp .title {
+    display: flex;
+    justify-content: space-evenly;
+
+    position: relative;
+    width: 99vw;
+
+    font-size: 10vw;
+    font-weight: 500;
+
+    z-index: 3;
+
+    animation-name: animtitle;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+@keyframes animtitle {
+    0% {top: 90px;}
+    50% {top: 110px;}
+    100% {top: 90px;}
+}
+.exp .list {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+
+    position: absolute;
+    top: 33vh;
+    width: 100%;
+
+ 
+    text-align: justify;
+    line-height: 0.5vh;
+
+    z-index: 3;
+}
+.exp .list .list1, .exp .list .list2, .exp .list .list3 {   
+    width: 80vw;
+    height: 60vh;
+    line-height: 3.6vh;
+}
+.exp .list .list1 h1, .exp .list .list2 h1, .exp .list .list3 h1 {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    height: 0vh;
+    font-size: 4vh;
+}
+.exp .list .list1 p, .exp .list .list2 p, .exp .list .list3 p {
+    overflow-y: scroll;
+    scrollbar-color: lightblue transparent;
+    scrollbar-width: thin;
+
+    height: 50vh;
+    font-size: 20px;
+
+}
+
+
+
+/*PROJECT PROJECT*/
+/*PROJECT PROJECT*/
+/*PROJECT PROJECT*/
+.project {
+    position: absolute;
+
+    top: 325vh;
+    width: 100vw;
+    height: 195vh;
+}
+.project .bg3 {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    background-image: url(pic/wallpaperflare.com_wallpaper\ \(9\).jpg);
+    background-size: cover;
+    background-position: left;
+    background-repeat: repeat-y;
+}
+.project .bg3cover {
+    position: absolute;
+    z-index: 2;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: rgb(0, 0, 0, 0.5);
+}   
+.project .title h1{
+    position: absolute;
+    z-index: 3;
+
+    top: 15vh;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 7vh;
+    color: #dcdcdc;
+
+    animation-name: animtitle2;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+@keyframes animtitle2 {
+    0% {top: 90px;}
+    50% {top: 110px;}
+    100% {top: 90px;}
+}
+.project .project1 {
+    position: absolute;
+    z-index: 3;
+    
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+}
+.project .project1 .img {
+    position: absolute;
+
+    top: 25vh;
+    width: 90vw;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.project .project1 .img .img11 {
+    position: absolute;
+
+    width: 100%;
+    height: 50vh;
+
+    background-image: url(pic/ss.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.project .project1 .img .img12 {
+    position: absolute;
+    
+    top: 40vh;
+    width: 100%;
+    height: 50vh;
+
+    background-image: url(pic/ss1.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.project .project1 .img .img13 {
+    position: absolute;
+
+    top: 80vh;
+    width: 100%;
+    height: 50vh;
+
+    background-image: url(pic/ss2.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.project .project1 .img .img14 {
+    position: absolute;
+
+    top: 120vh;
+    width: 100%;
+    height: 50vh;
+
+    background-image: url(pic/ss3.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+
+/*STORE STORE STORE STORE*/
+/*STORE STORE STORE STORE*/
+/*STORE STORE STORE STORE*/
+/*STORE STORE STORE STORE*/
+/*STORE STORE STORE STORE*/
+.store {
+    position: absolute;
+
+    width: 100vw;
+    top: 520vh;
+    height: 110vh;
+
+    background-color: transparent;
+    background-image: url(pic/bgmobile\ \(2\).jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.store .bgcover {
+    position: absolute;
+
+    width: 100vw;
+    height: 110vh;
+
+    background-color: rgb(0, 0, 0, 0.83);
+}
+.store .title {
+    position: absolute;
+
+    width: 99.2vw;
+    top: 10vh;
+
+    display: flex;
+    justify-content: center;
+
+    font-size: 6vh;
+    color: #dcdcdc;
+    background-color: transparent;
+
+    animation-name: animtitle3;
+    animation-iteration-count: infinite;
+    animation-duration: 10s;
+    animation-timing-function: ease;
+}
+@keyframes animtitle3 {
+    0% {color: #dcdcdc;}
+    25% {color: lightskyblue;
+        text-shadow: 0 0 23px lightblue,
+                     0 0 25px lightskyblue;
+        letter-spacing: 1vw;}
+    50% {color: plum;
+        text-shadow: 0 0 23px plum,
+                     0 0 25px pink;
+        letter-spacing: 1vw;}
+    75% {color: lightgreen;
+        text-shadow: 0 0 23px lightgreen,
+                     0 0 25px limegreen;
+        letter-spacing: 1vw;}
+    100% {columns: #dcdcdc;}
+}
+.store .items1 {
+    position: absolute;
+
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    justify-content: space-between;
+
+    background-color: transparent;
+
+    width: 100vw;
+
+    top: 20vh;
+    height: 35vh;
+}
+.store .items2 {
+    position: absolute;
+
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    justify-content: space-between;
+
+    background-color: transparent;
+
+    width: 100vw;
+
+    top: 60vh;
+    height: 35vh;
+}
+.store .item1, .store .item2, .store .item3, .store .item4, .store .item5 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 5vw;
+    padding-right: 5vw;
+
+    width: 50vw;
+    height: 33vh;
+
+    background-color: transparent;
+    color: lightsteelblue;
+}
+.store p{
+    font-size: 5vw;
+}
+.store .items1 h1, .store .items2 h1 {
+    color: snow;
+    font-size: 4vw;
+}
+.store .display {
+    width: 40vw;
+    height: 20vh;
+    background-color: transparent;
+}
+
+
+/*STORE DISPLAY*//*STORE DISPLAY*/
+/*STORE DISPLAY*//*STORE DISPLAY*/
+/*STORE DISPLAY*//*STORE DISPLAY*/
+.store .items1 .item1 .display {
+    background-image: url(pic/watch1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.store .items1 .item2 .display {
+    background-image: url(pic/watch2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.store .items1 .item3 .display {
+    background-image: url(pic/watch3.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.store .items1 .item4 .display {
+    background-image: url(pic/watch4.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.store .items1 .item5 .display {
+    background-image: url(pic/watch5.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.store .items2 .item1 .display {
+    background-image: url(pic/watch6.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.store .items2 .item2 .display {
+    background-image: url(pic/watch7.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.store .items2 .item3 .display {
+    background-image: url(pic/watch8.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.store .items2 .item4 .display {
+    background-image: url(pic/watch9.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.store .items2 .item5 .display {
+    background-image: url(pic/watch10.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+
+    box-shadow: 0 0 10px 10px rgb(0, 0, 0, 0.5);
+
+    position: absolute;
+    top: 620vh;
+    width: 100vw;
+    height: 10vh;
+
+    font-size: 3.5vw;
+}
+.contact .wa, .contact .ig, .contact .fb {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 32vw;
+}
+.contact .wa p, .contact .ig p, .contact .fb p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35vw;
+    height: 5vh;
+}
+.contact .waimg, .contact .igimg, .contact .fbimg {
+    width: 8vw;
+    height: 5vh;
+    border-radius: 5vh;
+}
+.contact .waimg {
+    background-image: url(pic/whatsapp\ \(2\).png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.contact .igimg {
+    background-image: url(pic/insta.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.contact .fbimg {
+    background-image: url(pic/facebook\ \(1\).png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+ .cf:before,
+ .cf:after {
+     content: " "; /* 1 */
+     display: table; /* 2 */
+ }
+ 
+ .cf:after {
+     clear: both;
+ }
+ 
+ /**
+  * For IE 6/7 only
+  * Include this rule to trigger hasLayout and contain floats.
+  */
+ .cf {
+     zoom: 1;
+ }
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
